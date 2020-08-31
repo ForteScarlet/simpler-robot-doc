@@ -1,6 +1,6 @@
 this is doc for simbot2.0
 
-
+see:
 
 [github page](https://fortescarlet.github.io/simple-robot-2.0-doc/)
 
