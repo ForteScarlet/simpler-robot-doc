@@ -1,0 +1,6 @@
+$dokka.format:html
+$dokka.linkExtension:html
+
+love.forte.simbot.common.api.message
+love.forte.simbot.common.api.message.containers
+
