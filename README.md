@@ -1,4 +1,4 @@
-this is doc for simbot2.0
+# this is doc for simpler-robot
 
 see:
 
