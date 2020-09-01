@@ -247,6 +247,13 @@ public interface <span class="typeNameLabel"><a href=GroupMsg.html>GroupMsg</a><
                                             <td class="colLast">群消息类型</td>
                                         </tr>
                                         
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public interface</code></td>
+                                            <th class="colSecond" scope="row"><code>FlagContent</span></code>
+                                            </th>
+                                            <td class="colLast">对于 &lt;a href=love.forte.simbot.common.api.message.events/GroupMsg.html&gt;GroupMsg&lt;/a&gt; 的 &lt;a href=love.forte.simbot.common.api.message.events/GroupMsg.html#GroupMsg.FlagContent&gt;标识主体&lt;/a&gt; 接口</td>
+                                        </tr>
+                                        
                                     </table>
                                 </div>
                             </li>
@@ -289,11 +296,11 @@ public interface <span class="typeNameLabel"><a href=GroupMsg.html>GroupMsg</a><
                                         </tr>
                                         
                                         <tr id="i1" class="rowColor">
-                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
+                                            <td class="colFirst"><code>abstract <a href=../love.forte.simbot.common.api.message.assists/Flag.html>Flag</a>&lt;<a href=GroupMsg.html#GroupMsg.FlagContent>GroupMsg.FlagContent</a>&gt;</code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=GroupMsg.html#getFlag()>getFlag</a>() </code>
                                             </th>
-                                            <td class="colLast"></td>
+                                            <td class="colLast">群聊消息的标识一般可用于撤回之类的。如果只是使用 <a href=GroupMsg.html#id()>id</a> 作为flag载体，在实现的时候可以参考 <a href=GroupMsgIdFlagContent.html>GroupMsgIdFlagContent</a></td>
                                         </tr>
                                         
                                         <tr id="i2" class="altColor">
@@ -405,7 +412,7 @@ public interface <span class="typeNameLabel"><a href=GroupMsg.html>GroupMsg</a><
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=GroupMsg.html#getAccountCode()>getAccountCode</a>() </code>
                                             </th>
-                                            <td class="colLast"></td>
+                                            <td class="colLast">账号</td>
                                         </tr>
                                         
                                         <tr id="i16" class="altColor">
@@ -449,7 +456,7 @@ public interface <span class="typeNameLabel"><a href=GroupMsg.html>GroupMsg</a><
                                         </tr>
                                         
                                         <tr id="i21" class="rowColor">
-                                            <td class="colFirst"><code>abstract <a href=../love.forte.simbot.common.api.message.types/Permissions.html>Permissions</a></code>
+                                            <td class="colFirst"><code>abstract <a href=../love.forte.simbot.common.api.message.assists/Permissions.html>Permissions</a></code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=GroupMsg.html#getPermission()>getPermission</a>() </code>
                                             </th>
@@ -532,8 +539,8 @@ public interface <span class="typeNameLabel"><a href=GroupMsg.html>GroupMsg</a><
                                           >
                                     <li class="blockList">
                                         <h4>getFlag</h4>
-                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=GroupMsg.html#getFlag()>getFlag</a>()</pre>
-                                        <div class="block"></div>
+                                        <pre class="methodSignature"> abstract <a href=../love.forte.simbot.common.api.message.assists/Flag.html>Flag</a>&lt;<a href=GroupMsg.html#GroupMsg.FlagContent>GroupMsg.FlagContent</a>&gt; <a href=GroupMsg.html#getFlag()>getFlag</a>()</pre>
+                                        <div class="block">群聊消息的标识一般可用于撤回之类的。如果只是使用 <a href=GroupMsg.html#id()>id</a> 作为flag载体，在实现的时候可以参考 <a href=GroupMsgIdFlagContent.html>GroupMsgIdFlagContent</a></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
@@ -743,7 +750,7 @@ public interface <span class="typeNameLabel"><a href=GroupMsg.html>GroupMsg</a><
                                     <li class="blockList">
                                         <h4>getAccountCode</h4>
                                         <pre class="methodSignature"> abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=GroupMsg.html#getAccountCode()>getAccountCode</a>()</pre>
-                                        <div class="block"></div>
+                                        <div class="block">账号</div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
@@ -832,7 +839,7 @@ public interface <span class="typeNameLabel"><a href=GroupMsg.html>GroupMsg</a><
                                           >
                                     <li class="blockList">
                                         <h4>getPermission</h4>
-                                        <pre class="methodSignature"> abstract <a href=../love.forte.simbot.common.api.message.types/Permissions.html>Permissions</a> <a href=GroupMsg.html#getPermission()>getPermission</a>()</pre>
+                                        <pre class="methodSignature"> abstract <a href=../love.forte.simbot.common.api.message.assists/Permissions.html>Permissions</a> <a href=GroupMsg.html#getPermission()>getPermission</a>()</pre>
                                         <div class="block"></div>
                                         
                                         <!-- TODO missing return annotation -->
