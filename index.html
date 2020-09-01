@@ -2,11 +2,52 @@
 <html lang="zh_CN">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>doc index</title>
+    <link rel="icon" href="http://q1.qlogo.cn/g?b=qq&nk=1149159218&s=100" type="image/x-icon"/>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <a href="docs/common-api/doc/">common-api-javadoc</a>
-    <br>
-    <a href="docs/common-api/doc/common-api/">common-api-dokka-doc</a>
+<div id="forte" class="container">
+
+    <!--<div class="row">-->
+    <!--    -->
+    <!--</div>-->
+
+    <!-- header -->
+    <div class="jumbotron">
+        <div class="page-header">
+            <h1> Simpler-Robot Doc <small> 文档索引 </small></h1>
+        </div>
+    </div>
+
+    <!-- list -->
+    <div>
+
+    </div>
+    <div class="list-group">
+        <div v-for="(mod,i) in mods">
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-4">
+                        Module: <b v-text="mod.name"></b>
+                    </div>
+                    <div class="col-4 text-center">
+                        <b v-text="mod.description || '-'"></b>
+                    </div>
+                    <div class="col-4 text-right">
+                        <a :href="'docs/'+ mod.name +'/doc/'" v-text="'javadoc'"></a>
+                        /
+                        <a :href="'docs/'+ mod.name +'/doc/common-api/'" v-text="'dokka-doc'"></a>
+                    </div>
+                </div>
+            </li>
+        </div>
+    </div>
+
+</div>
+<script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
+<script src="js/index.js" type="text/javascript"></script>
 </body>
+
 </html>
