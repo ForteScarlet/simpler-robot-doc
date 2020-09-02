@@ -123,17 +123,33 @@ var pathtoroot = "../";
 
     <tr class="altColor"><th class="colFirst" scope="row"><a href=MsgGet.html>MsgGet</a></th><td class="colLast">监听消息的父接口。所有的监听消息都应当实现的容器：</td></tr>
 
-    <tr class="rowColor"><th class="colFirst" scope="row"><a href=MessageEventGet.html>MessageEventGet</a></th><td class="colLast">与消息有关的事件<a href=MessageEventGet.html>MessageEventGet</a>中除了需要实现<a href=MsgGet.html>MsgGet</a>以外, 还要实现<a href=../love.forte.simbot.common.api.message.containers/FlagContainer.html>FlagContainer</a>以标识一个消息内容的标识。 但是一般来讲, <a href=../love.forte.simbot.common.api.message.assists/FlagContent.html>FlagContent</a> 都可以用 <a href=MessageEventGet.html#id()>id</a> 来代替。因此 <a href=../love.forte.simbot.common.api.message.assists/FlagContent.html>FlagContent</a> 提供为默认方法并使用 <a href=MessageEventGet.html#id()>id</a> 作为返回值。如果有特殊需要则重写</td></tr>
+    <tr class="rowColor"><th class="colFirst" scope="row"><a href=EventGet.html>EventGet</a></th><td class="colLast">事件父接口，是当一个监听类型为得不到 <a href=EventGet.html#msg()>消息文本</a> 的事件的时候使用的接口。此父接口与 <a href=MsgGet.html>MsgGet</a> 的唯一区别就是此接口为 <a href=EventGet.html#msg()>msg</a> 提供了无效化的默认实现。</td></tr>
 
-    <tr class="altColor"><th class="colFirst" scope="row"><a href=MessageRecallEventGet.html>MessageRecallEventGet</a></th><td class="colLast">与消息撤回有关的事件, 例如 <a href=GroupMsgRecall.html>群消息撤回</a> 或者 <a href=PrivateMsgRecall.html>私聊撤回</a>一般来讲应该可以得到撤回的<a href=MsgGet.html#msg()>消息内容</a>以及<a href=MessageRecallEventGet.html#recallTime()>撤回时间</a></td></tr>
+    <tr class="altColor"><th class="colFirst" scope="row"><a href=MessageEventGet.html>MessageEventGet</a></th><td class="colLast">与消息有关的事件<a href=MessageEventGet.html>MessageEventGet</a>中除了需要实现<a href=MsgGet.html>MsgGet</a>以外, 还要实现<a href=../love.forte.simbot.common.api.message.containers/FlagContainer.html>FlagContainer</a>以标识一个消息内容的标识。 但是一般来讲, <a href=../love.forte.simbot.common.api.message.assists/FlagContent.html>FlagContent</a> 都可以用 <a href=MessageEventGet.html#id()>id</a> 来代替。因此 <a href=../love.forte.simbot.common.api.message.assists/FlagContent.html>FlagContent</a> 提供为默认方法并使用 <a href=MessageEventGet.html#id()>id</a> 作为返回值。如果有特殊需要则重写</td></tr>
 
-    <tr class="rowColor"><th class="colFirst" scope="row"><a href=MemberChangesEventGet.html>MemberChangesEventGet</a></th><td class="colLast">成员变动事件接口，是<a href=IncreaseEventGet.html>增加事件</a> 与 <a href=ReduceEventGet.html>减少事件</a>的父接口.</td></tr>
+    <tr class="rowColor"><th class="colFirst" scope="row"><a href=MessageRecallEventGet.html>MessageRecallEventGet</a></th><td class="colLast">与消息撤回有关的事件, 例如 <a href=GroupMsgRecall.html>群消息撤回</a> 或者 <a href=PrivateMsgRecall.html>私聊撤回</a>一般来讲应该可以得到撤回的<a href=MsgGet.html#msg()>消息内容</a>以及<a href=MessageRecallEventGet.html#recallTime()>撤回时间</a></td></tr>
 
-    <tr class="altColor"><th class="colFirst" scope="row"><a href=IncreaseEventGet.html>IncreaseEventGet</a></th><td class="colLast">与 增加 有关的事件，例如 群友增加 或者 好友增加</td></tr>
+    <tr class="altColor"><th class="colFirst" scope="row"><a href=MemberChangesEventGet.html>MemberChangesEventGet</a></th><td class="colLast">成员变动事件接口，是<a href=IncreaseEventGet.html>增加事件</a> 与 <a href=ReduceEventGet.html>减少事件</a>的父接口.</td></tr>
 
-    <tr class="rowColor"><th class="colFirst" scope="row"><a href=ReduceEventGet.html>ReduceEventGet</a></th><td class="colLast">与 减少 有关的事件，例如 群友减少 或者 好友减少</td></tr>
+    <tr class="rowColor"><th class="colFirst" scope="row"><a href=IncreaseEventGet.html>IncreaseEventGet</a></th><td class="colLast">与 增加 有关的事件，例如 群友增加 或者 好友增加</td></tr>
 
-    <tr class="altColor"><th class="colFirst" scope="row"><a href=RequestGet.html>RequestGet</a></th><td class="colLast">与 请求 相关的父接口</td></tr>
+    <tr class="altColor"><th class="colFirst" scope="row"><a href=ReduceEventGet.html>ReduceEventGet</a></th><td class="colLast">与 减少 有关的事件，例如 群友减少 或者 好友减少</td></tr>
+
+    <tr class="rowColor"><th class="colFirst" scope="row"><a href=RequestGet.html>RequestGet</a></th><td class="colLast">与 请求 相关的父接口</td></tr>
+
+    <tr class="altColor"><th class="colFirst" scope="row"><a href=ChangedGet.html>ChangedGet</a></th><td class="colLast">出现变化的事件。例如权限变更、头像变更、名称变更等等。 大多数情况下，此类事件都是在变更完了之后触发的。</td></tr>
+
+    <tr class="rowColor"><th class="colFirst" scope="row"><a href=GroupMemberPermissionChanged.html>GroupMemberPermissionChanged</a></th><td class="colLast">群成员权限变动事件。 一般来讲，权限变动无非就是 成为管理 或者 被取消管理</td></tr>
+
+    <tr class="altColor"><th class="colFirst" scope="row"><a href=GroupNameChanged.html>GroupNameChanged</a></th><td class="colLast">群名称变动事件。</td></tr>
+
+    <tr class="rowColor"><th class="colFirst" scope="row"><a href=GroupMemberRemarkChanged.html>GroupMemberRemarkChanged</a></th><td class="colLast">群友群名片变动事件。</td></tr>
+
+    <tr class="altColor"><th class="colFirst" scope="row"><a href=GroupMemberSpecialChanged.html>GroupMemberSpecialChanged</a></th><td class="colLast">群友头衔变动事件。</td></tr>
+
+    <tr class="rowColor"><th class="colFirst" scope="row"><a href=FriendNicknameChanged.html>FriendNicknameChanged</a></th><td class="colLast">好友昵称变动事件</td></tr>
+
+    <tr class="altColor"><th class="colFirst" scope="row"><a href=FriendAvatarChanged.html>FriendAvatarChanged</a></th><td class="colLast">好友头像变动事件</td></tr>
 
     <tr class="rowColor"><th class="colFirst" scope="row"><a href=FriendIncrease.html>FriendIncrease</a></th><td class="colLast">好友增加.</td></tr>
 
@@ -154,6 +170,8 @@ var pathtoroot = "../";
     <tr class="rowColor"><th class="colFirst" scope="row"><a href=FriendAddRequest.html>FriendAddRequest</a></th><td class="colLast">好友请求事件。 此时申请人尚未成为好友。</td></tr>
 
     <tr class="altColor"><th class="colFirst" scope="row"><a href=GroupAddRequest.html>GroupAddRequest</a></th><td class="colLast">群添加请求。此时申请人尚未入群。</td></tr>
+
+    <tr class="rowColor"><th class="colFirst" scope="row"><a href=GroupAddRequestInvitor.html>GroupAddRequestInvitor</a></th><td class="colLast"><a href=GroupAddRequest.html>群添加请求</a> 中的邀请者信息。</td></tr>
 </tbody>
 </table>
 
@@ -181,7 +199,7 @@ var pathtoroot = "../";
 
     <tr class="rowColor"><th class="colFirst" scope="row"><a href=GroupMsgIdFlagContent.html>GroupMsgIdFlagContent</a></th><td class="colLast">基于ID作为标识主体的 <a href=GroupMsg.html#GroupMsg.FlagContent>GroupMsg.FlagContent</a> 实现</td></tr>
 
-    <tr class="altColor"><th class="colFirst" scope="row"><a href=FriendAddRequestIdFlagContent.html>FriendAddRequestIdFlagContent</a></th><td class="colLast">使用 id 作为标识载体的 <a href=FriendAddRequest.html#FriendAddRequest.FlagContent>FriendAddRequest.FlagContent</a> 实现</td></tr>
+    <tr class="altColor"><th class="colFirst" scope="row"><a href=FriendAddRequestIdFlagContent.html>FriendAddRequestIdFlagContent</a></th><td class="colLast">使用 id 作为标识载体的 <a href=FriendAddRequest.html#FriendAddRequest.FlagContent>标识主体</a> 实现</td></tr>
 
     <tr class="rowColor"><th class="colFirst" scope="row"><a href=GroupAddRequestIdFlagContent.html>GroupAddRequestIdFlagContent</a></th><td class="colLast">使用 id 作为标识载体的 <a href=GroupAddRequest.html#GroupAddRequest.FlagContent>GroupAddRequest.FlagContent</a> 实现</td></tr>
 </tbody>

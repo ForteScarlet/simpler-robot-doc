@@ -1,8 +1,12 @@
 $dokka.format:html
 $dokka.linkExtension:html
-$dokka.location:love.forte.simbot.common.api.message.assists//flagImpl/#kotlin.Function0[TypeParam(bounds=[love.forte.simbot.common.api.message.assists.FlagContent])]/PointingToDeclaration/common-api/love.forte.simbot.common.api.message.assists/-flag-kt/flag-impl.html
+$dokka.location:love.forte.simbot.common.api.messages.assists//flag/#kotlin.Function0[TypeParam(bounds=[love.forte.simbot.common.api.messages.assists.FlagContent])]/PointingToDeclaration/common-api/love.forte.simbot.common.api.messages.assists/-flag-kt/flag.html
 love.forte.simbot.common.annotations
-love.forte.simbot.common.api.message.assists
-love.forte.simbot.common.api.message.containers
-love.forte.simbot.common.api.message.events
+love.forte.simbot.common.api.carrier
+love.forte.simbot.common.api.messages
+love.forte.simbot.common.api.messages.assists
+love.forte.simbot.common.api.messages.containers
+love.forte.simbot.common.api.messages.events
+love.forte.simbot.common.api.messages.receipts
+love.forte.simbot.common.api.sender
 

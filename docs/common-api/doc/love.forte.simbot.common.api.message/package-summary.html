@@ -121,15 +121,31 @@ var pathtoroot = "../";
 </tr>
 <tbody>
 
-    <tr class="altColor"><th class="colFirst" scope="row"><a href=MsgGet.html>MsgGet</a></th><td class="colLast">监听消息的父接口。所有的监听消息都应当实现的容器：</td></tr>
+    <tr class="altColor"><th class="colFirst" scope="row"><a href=MessageContent.html>MessageContent</a></th><td class="colLast">一个 消息内容。它被使用在<a href=../love.forte.simbot.common.api.message.events/MessageEventGet.html>MessageEventGet</a> 接口的 <a href=../love.forte.simbot.common.api.message.events/MessageEventGet.html#msgContent()>MessageEventGet.msgContent</a> 上，表示当前消息的正文内容。一个 <a href=MessageContent.html>MessageContent</a> 实例至少应该保证能够得到当前消息的 <a href=MessageContent.html#msg()>消息字符串文本</a></td></tr>
+</tbody>
+</table>
 
-    <tr class="rowColor"><th class="colFirst" scope="row"><a href=MessageEventGet.html>MessageEventGet</a></th><td class="colLast">与消息有关的事件 除了<a href=MsgGet.html>MsgGet</a>中的东西以外, 还要有一个<a href=../love.forte.simbot.common.api.message.containers/FlagContainer.html>FlagContainer</a>。 但是一般来讲, <a href=../love.forte.simbot.common.api.message.containers/FlagContainer.html#flag()>FlagContainer.flag</a> 都可以用 <a href=MessageEventGet.html#id()>id</a>来代替。 因此 <a href=MessageEventGet.html#flag()>flag</a>提供为默认方法并使用<a href=MessageEventGet.html#id()>id</a>作为返回值。如果有特殊需要则重写</td></tr>
+    </div>
 
-    <tr class="altColor"><th class="colFirst" scope="row"><a href=MessageRecallEventGet.html>MessageRecallEventGet</a></th><td class="colLast">与消息撤回有关的事件 例如群消息撤回或者私聊撤回 一般来讲应该可以得到撤回的<a href=MsgGet.html#msg()>消息内容</a>以及<a href=MessageRecallEventGet.html#recallTime()>撤回时间</a></td></tr>
+                </li>
+                
+                <li class="blockList">
+                    
+                    
+                    
+                    
+                    
+    <div class="typeSummary">
 
-    <tr class="rowColor"><th class="colFirst" scope="row"><a href=PrivateMsg.html>PrivateMsg</a></th><td class="colLast">私聊消息</td></tr>
+<table>
+<caption><span>Class Summary</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Class</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tbody>
 
-    <tr class="altColor"><th class="colFirst" scope="row"><a href=GroupMsg.html>GroupMsg</a></th><td class="colLast">群消息</td></tr>
+    <tr class="altColor"><th class="colFirst" scope="row"><a href=TextMessageContent.html>TextMessageContent</a></th><td class="colLast">一个以字符串消息为主体的 <a href=MessageContent.html>MessageContent</a> 默认实现类</td></tr>
 </tbody>
 </table>
 

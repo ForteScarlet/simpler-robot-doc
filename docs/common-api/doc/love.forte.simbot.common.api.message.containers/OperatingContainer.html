@@ -114,27 +114,12 @@ var pathtoroot = "../";
                         <dt>All Implemented Interfaces:</dt>
                         <dd>
                             
-                            <code>love.forte.simbot.common.api.message.containers.OperatingAvatarContainer</code>
+                            <code>love.forte.simbot.common.api.message.containers.BeOperatorContainer</code>
                             
                             ,
                             
                             
-                            <code>love.forte.simbot.common.api.message.containers.OperatingCodeContainer</code>
-                            
-                            ,
-                            
-                            
-                            <code>love.forte.simbot.common.api.message.containers.OperatingNameContainer</code>
-                            
-                            ,
-                            
-                            
-                            <code>love.forte.simbot.common.api.message.containers.OperatingNicknameContainer</code>
-                            
-                            ,
-                            
-                            
-                            <code>love.forte.simbot.common.api.message.containers.OperatingRemarkContainer</code>
+                            <code>love.forte.simbot.common.api.message.containers.OperatorContainer</code>
                             
                             
                         </dd>
@@ -142,9 +127,9 @@ var pathtoroot = "../";
                     
                     <hr>
                     <pre>
-@<a href=../love.forte.simbot.common.annotations/ContainerType.html>ContainerType</a>(comment = "操作者信息容器") 
+@<a href=../love.forte.simbot.common.annotations/ContainerType.html>ContainerType</a>(comment = "操作者容器") 
 public interface <span class="typeNameLabel"><a href=OperatingContainer.html>OperatingContainer</a></span>
- implements <a href=OperatingCodeContainer.html>OperatingCodeContainer</a>, <a href=OperatingNameContainer.html>OperatingNameContainer</a>, <a href=OperatingAvatarContainer.html>OperatingAvatarContainer</a> 
+ implements <a href=OperatorContainer.html>OperatorContainer</a>, <a href=BeOperatorContainer.html>BeOperatorContainer</a> 
                     </pre>
                     <div class="block">针对一个存在 操作 内容的事件, 此容器提供了在 操作 事件中的 操作者 与 被操作者 的相关信息容器</div>
                 </li>
@@ -183,115 +168,19 @@ public interface <span class="typeNameLabel"><a href=OperatingContainer.html>Ope
                                         </tr>
                                         
                                         <tr id="i0" class="altColor">
-                                            <td class="colFirst"><code>abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
+                                            <td class="colFirst"><code>abstract <a href=OperatorInfoContainer.html>OperatorInfoContainer</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=OperatingContainer.html#getOperatorCode()>getOperatorCode</a>() </code>
+                                            <th class="colSecond" scope="row"><code><a href=OperatingContainer.html#getOperatorInfo()>getOperatorInfo</a>() </code>
                                             </th>
-                                            <td class="colLast">操作者的code</td>
+                                            <td class="colLast">得到一个操作者信息 可能会是null</td>
                                         </tr>
                                         
                                         <tr id="i1" class="rowColor">
-                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html>Long</a></code>
+                                            <td class="colFirst"><code>abstract <a href=BeOperatorInfoContainer.html>BeOperatorInfoContainer</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=OperatingContainer.html#getOperatorCodeNumber()>getOperatorCodeNumber</a>() </code>
+                                            <th class="colSecond" scope="row"><code><a href=OperatingContainer.html#getBeOperatorInfo()>getBeOperatorInfo</a>() </code>
                                             </th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr id="i2" class="altColor">
-                                            <td class="colFirst"><code>abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=OperatingContainer.html#getBeOperatorCode()>getBeOperatorCode</a>() </code>
-                                            </th>
-                                            <td class="colLast">被操作者的Code</td>
-                                        </tr>
-                                        
-                                        <tr id="i3" class="rowColor">
-                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html>Long</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=OperatingContainer.html#getBeOperatorCodeNumber()>getBeOperatorCodeNumber</a>() </code>
-                                            </th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr id="i4" class="altColor">
-                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=OperatingContainer.html#getOperatorRemarkOrNickname()>getOperatorRemarkOrNickname</a>() </code>
-                                            </th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr id="i5" class="rowColor">
-                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=OperatingContainer.html#getOperatorNicknameAndRemark()>getOperatorNicknameAndRemark</a>() </code>
-                                            </th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr id="i6" class="altColor">
-                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=OperatingContainer.html#getBeOperatorRemarkOrNickname()>getBeOperatorRemarkOrNickname</a>() </code>
-                                            </th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr id="i7" class="rowColor">
-                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=OperatingContainer.html#getBeOperatorNicknameAndRemark()>getBeOperatorNicknameAndRemark</a>() </code>
-                                            </th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr id="i8" class="altColor">
-                                            <td class="colFirst"><code>abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=OperatingContainer.html#getOperatorNickname()>getOperatorNickname</a>() </code>
-                                            </th>
-                                            <td class="colLast">操作者的昵称</td>
-                                        </tr>
-                                        
-                                        <tr id="i9" class="rowColor">
-                                            <td class="colFirst"><code>abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=OperatingContainer.html#getBeOperatorNickname()>getBeOperatorNickname</a>() </code>
-                                            </th>
-                                            <td class="colLast">被操作者的昵称</td>
-                                        </tr>
-                                        
-                                        <tr id="i10" class="altColor">
-                                            <td class="colFirst"><code>abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=OperatingContainer.html#getOperatorRemark()>getOperatorRemark</a>() </code>
-                                            </th>
-                                            <td class="colLast">操作者的备注</td>
-                                        </tr>
-                                        
-                                        <tr id="i11" class="rowColor">
-                                            <td class="colFirst"><code>abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=OperatingContainer.html#getBeOperatorRemark()>getBeOperatorRemark</a>() </code>
-                                            </th>
-                                            <td class="colLast">被操作者的备注</td>
-                                        </tr>
-                                        
-                                        <tr id="i12" class="altColor">
-                                            <td class="colFirst"><code>abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=OperatingContainer.html#getOperatorAvatar()>getOperatorAvatar</a>() </code>
-                                            </th>
-                                            <td class="colLast">得到操作者的头像地址.</td>
-                                        </tr>
-                                        
-                                        <tr id="i13" class="rowColor">
-                                            <td class="colFirst"><code>abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=OperatingContainer.html#getBeOperatorAvatar()>getBeOperatorAvatar</a>() </code>
-                                            </th>
-                                            <td class="colLast">得到被操作者的头像地址.</td>
+                                            <td class="colLast">得到一个被操作者信息  可能会是null</td>
                                         </tr>
                                         
                                         </tbody>
@@ -299,10 +188,10 @@ public interface <span class="typeNameLabel"><a href=OperatingContainer.html>Ope
                                 </div>
                                 <ul class="blockList">
                                 
-                                    <li class="blockList"><a id="methods.inherited.from.class.love.forte.simbot.common.api.message.containers.OperatingCodeContainer">
+                                    <li class="blockList"><a id="methods.inherited.from.class.love.forte.simbot.common.api.message.containers.OperatorContainer">
                                             <!--   -->
                                         </a>
-                                            <h3>Methods inherited from class&nbsp;love.forte.simbot.common.api.message.containers.OperatingCodeContainer</h3>
+                                            <h3>Methods inherited from class&nbsp;love.forte.simbot.common.api.message.containers.OperatorContainer</h3>
                                             <code>equals, hashCode, toString</code></li>
                                  
                                     <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
@@ -333,211 +222,31 @@ public interface <span class="typeNameLabel"><a href=OperatingContainer.html>Ope
                             </a>
                                 <h3>Method Detail</h3>
                                 
-                                <a id="getOperatorCode()">
+                                <a id="getOperatorInfo()">
                                     <!--   -->
                                 </a>
                                 <ul class=
                                               "blockList"
                                           >
                                     <li class="blockList">
-                                        <h4>getOperatorCode</h4>
-                                        <pre class="methodSignature"> abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=OperatingContainer.html#getOperatorCode()>getOperatorCode</a>()</pre>
-                                        <div class="block">操作者的code</div>
+                                        <h4>getOperatorInfo</h4>
+                                        <pre class="methodSignature"> abstract <a href=OperatorInfoContainer.html>OperatorInfoContainer</a> <a href=OperatingContainer.html#getOperatorInfo()>getOperatorInfo</a>()</pre>
+                                        <div class="block">得到一个操作者信息 可能会是null</div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
                                 </ul>
                                 
-                                <a id="getOperatorCodeNumber()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getOperatorCodeNumber</h4>
-                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html>Long</a> <a href=OperatingContainer.html#getOperatorCodeNumber()>getOperatorCodeNumber</a>()</pre>
-                                        <div class="block"></div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getBeOperatorCode()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getBeOperatorCode</h4>
-                                        <pre class="methodSignature"> abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=OperatingContainer.html#getBeOperatorCode()>getBeOperatorCode</a>()</pre>
-                                        <div class="block">被操作者的Code</div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getBeOperatorCodeNumber()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getBeOperatorCodeNumber</h4>
-                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html>Long</a> <a href=OperatingContainer.html#getBeOperatorCodeNumber()>getBeOperatorCodeNumber</a>()</pre>
-                                        <div class="block"></div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getOperatorRemarkOrNickname()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getOperatorRemarkOrNickname</h4>
-                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=OperatingContainer.html#getOperatorRemarkOrNickname()>getOperatorRemarkOrNickname</a>()</pre>
-                                        <div class="block"></div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getOperatorNicknameAndRemark()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getOperatorNicknameAndRemark</h4>
-                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=OperatingContainer.html#getOperatorNicknameAndRemark()>getOperatorNicknameAndRemark</a>()</pre>
-                                        <div class="block"></div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getBeOperatorRemarkOrNickname()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getBeOperatorRemarkOrNickname</h4>
-                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=OperatingContainer.html#getBeOperatorRemarkOrNickname()>getBeOperatorRemarkOrNickname</a>()</pre>
-                                        <div class="block"></div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getBeOperatorNicknameAndRemark()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getBeOperatorNicknameAndRemark</h4>
-                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=OperatingContainer.html#getBeOperatorNicknameAndRemark()>getBeOperatorNicknameAndRemark</a>()</pre>
-                                        <div class="block"></div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getOperatorNickname()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getOperatorNickname</h4>
-                                        <pre class="methodSignature"> abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=OperatingContainer.html#getOperatorNickname()>getOperatorNickname</a>()</pre>
-                                        <div class="block">操作者的昵称</div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getBeOperatorNickname()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getBeOperatorNickname</h4>
-                                        <pre class="methodSignature"> abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=OperatingContainer.html#getBeOperatorNickname()>getBeOperatorNickname</a>()</pre>
-                                        <div class="block">被操作者的昵称</div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getOperatorRemark()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getOperatorRemark</h4>
-                                        <pre class="methodSignature"> abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=OperatingContainer.html#getOperatorRemark()>getOperatorRemark</a>()</pre>
-                                        <div class="block">操作者的备注</div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getBeOperatorRemark()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getBeOperatorRemark</h4>
-                                        <pre class="methodSignature"> abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=OperatingContainer.html#getBeOperatorRemark()>getBeOperatorRemark</a>()</pre>
-                                        <div class="block">被操作者的备注</div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getOperatorAvatar()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getOperatorAvatar</h4>
-                                        <pre class="methodSignature"> abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=OperatingContainer.html#getOperatorAvatar()>getOperatorAvatar</a>()</pre>
-                                        <div class="block">得到操作者的头像地址.</div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getBeOperatorAvatar()">
+                                <a id="getBeOperatorInfo()">
                                     <!--   -->
                                 </a>
                                 <ul class=
                                               "blockListLast"
                                           >
                                     <li class="blockList">
-                                        <h4>getBeOperatorAvatar</h4>
-                                        <pre class="methodSignature"> abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=OperatingContainer.html#getBeOperatorAvatar()>getBeOperatorAvatar</a>()</pre>
-                                        <div class="block">得到被操作者的头像地址.</div>
+                                        <h4>getBeOperatorInfo</h4>
+                                        <pre class="methodSignature"> abstract <a href=BeOperatorInfoContainer.html>BeOperatorInfoContainer</a> <a href=OperatingContainer.html#getBeOperatorInfo()>getBeOperatorInfo</a>()</pre>
+                                        <div class="block">得到一个被操作者信息  可能会是null</div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>

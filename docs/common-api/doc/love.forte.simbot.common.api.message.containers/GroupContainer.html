@@ -110,33 +110,13 @@ var pathtoroot = "../";
             <ul class="blockList">
                 <li class="blockList">
                     
-                    <dl>
-                        <dt>All Implemented Interfaces:</dt>
-                        <dd>
-                            
-                            <code>love.forte.simbot.common.api.message.containers.GroupAvatarContainer</code>
-                            
-                            ,
-                            
-                            
-                            <code>love.forte.simbot.common.api.message.containers.GroupCodeContainer</code>
-                            
-                            ,
-                            
-                            
-                            <code>love.forte.simbot.common.api.message.containers.GroupNameContainer</code>
-                            
-                            
-                        </dd>
-                    </dl>
-                    
                     <hr>
                     <pre>
-@<a href=../love.forte.simbot.common.annotations/ContainerType.html>ContainerType</a>(comment = "群信息容器") 
+@<a href=../love.forte.simbot.common.annotations/ContainerType.html>ContainerType</a>(comment = "群容器") 
 public interface <span class="typeNameLabel"><a href=GroupContainer.html>GroupContainer</a></span>
- implements <a href=GroupAvatarContainer.html>GroupAvatarContainer</a>, <a href=GroupCodeContainer.html>GroupCodeContainer</a>, <a href=GroupNameContainer.html>GroupNameContainer</a> 
+
                     </pre>
-                    <div class="block">群信息容器，实现 <a href=GroupAvatarContainer.html>群头像容器</a>, <a href=GroupCodeContainer.html>群账号容器</a>, <a href=GroupNameContainer.html>群名称容器</a></div>
+                    <div class="block">可以得到一个<a href=GroupInfoContainer.html>群信息</a>容器</div>
                 </li>
             </ul>
         </div>
@@ -173,35 +153,11 @@ public interface <span class="typeNameLabel"><a href=GroupContainer.html>GroupCo
                                         </tr>
                                         
                                         <tr id="i0" class="altColor">
-                                            <td class="colFirst"><code>abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
+                                            <td class="colFirst"><code>abstract <a href=GroupInfoContainer.html>GroupInfoContainer</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=GroupContainer.html#getGroupAvatar()>getGroupAvatar</a>() </code>
-                                            </th>
-                                            <td class="colLast">群头像.</td>
-                                        </tr>
-                                        
-                                        <tr id="i1" class="rowColor">
-                                            <td class="colFirst"><code>abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=GroupContainer.html#getGroupCode()>getGroupCode</a>() </code>
-                                            </th>
-                                            <td class="colLast">群号</td>
-                                        </tr>
-                                        
-                                        <tr id="i2" class="altColor">
-                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html>Long</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=GroupContainer.html#getGroupCodeNumber()>getGroupCodeNumber</a>() </code>
+                                            <th class="colSecond" scope="row"><code><a href=GroupContainer.html#getGroupInfo()>getGroupInfo</a>() </code>
                                             </th>
                                             <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr id="i3" class="rowColor">
-                                            <td class="colFirst"><code>abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=GroupContainer.html#getGroupName()>getGroupName</a>() </code>
-                                            </th>
-                                            <td class="colLast">群名称</td>
                                         </tr>
                                         
                                         </tbody>
@@ -209,10 +165,10 @@ public interface <span class="typeNameLabel"><a href=GroupContainer.html>GroupCo
                                 </div>
                                 <ul class="blockList">
                                 
-                                    <li class="blockList"><a id="methods.inherited.from.class.love.forte.simbot.common.api.message.containers.GroupAvatarContainer">
+                                    <li class="blockList"><a id="methods.inherited.from.class.love.forte.simbot.common.api.message.containers.GroupContainer">
                                             <!--   -->
                                         </a>
-                                            <h3>Methods inherited from class&nbsp;love.forte.simbot.common.api.message.containers.GroupAvatarContainer</h3>
+                                            <h3>Methods inherited from class&nbsp;love.forte.simbot.common.api.message.containers.GroupContainer</h3>
                                             <code>equals, hashCode, toString</code></li>
                                  
                                     <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
@@ -243,61 +199,16 @@ public interface <span class="typeNameLabel"><a href=GroupContainer.html>GroupCo
                             </a>
                                 <h3>Method Detail</h3>
                                 
-                                <a id="getGroupAvatar()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getGroupAvatar</h4>
-                                        <pre class="methodSignature"> abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=GroupContainer.html#getGroupAvatar()>getGroupAvatar</a>()</pre>
-                                        <div class="block">群头像.</div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getGroupCode()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getGroupCode</h4>
-                                        <pre class="methodSignature"> abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=GroupContainer.html#getGroupCode()>getGroupCode</a>()</pre>
-                                        <div class="block">群号</div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getGroupCodeNumber()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getGroupCodeNumber</h4>
-                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html>Long</a> <a href=GroupContainer.html#getGroupCodeNumber()>getGroupCodeNumber</a>()</pre>
-                                        <div class="block"></div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getGroupName()">
+                                <a id="getGroupInfo()">
                                     <!--   -->
                                 </a>
                                 <ul class=
                                               "blockListLast"
                                           >
                                     <li class="blockList">
-                                        <h4>getGroupName</h4>
-                                        <pre class="methodSignature"> abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=GroupContainer.html#getGroupName()>getGroupName</a>()</pre>
-                                        <div class="block">群名称</div>
+                                        <h4>getGroupInfo</h4>
+                                        <pre class="methodSignature"> abstract <a href=GroupInfoContainer.html>GroupInfoContainer</a> <a href=GroupContainer.html#getGroupInfo()>getGroupInfo</a>()</pre>
+                                        <div class="block"></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>

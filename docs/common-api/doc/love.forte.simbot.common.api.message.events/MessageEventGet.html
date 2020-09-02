@@ -114,52 +114,12 @@ var pathtoroot = "../";
                         <dt>All Implemented Interfaces:</dt>
                         <dd>
                             
-                            <code>love.forte.simbot.common.api.message.containers.AccountAvatarContainer</code>
-                            
-                            ,
-                            
-                            
-                            <code>love.forte.simbot.common.api.message.containers.AccountCodeContainer</code>
-                            
-                            ,
-                            
-                            
                             <code>love.forte.simbot.common.api.message.containers.AccountContainer</code>
                             
                             ,
                             
                             
-                            <code>love.forte.simbot.common.api.message.containers.AccountNameContainer</code>
-                            
-                            ,
-                            
-                            
-                            <code>love.forte.simbot.common.api.message.containers.AccountNicknameContainer</code>
-                            
-                            ,
-                            
-                            
-                            <code>love.forte.simbot.common.api.message.containers.AccountRemarkContainer</code>
-                            
-                            ,
-                            
-                            
-                            <code>love.forte.simbot.common.api.message.containers.BotAvatarContainer</code>
-                            
-                            ,
-                            
-                            
-                            <code>love.forte.simbot.common.api.message.containers.BotCodeContainer</code>
-                            
-                            ,
-                            
-                            
                             <code>love.forte.simbot.common.api.message.containers.BotContainer</code>
-                            
-                            ,
-                            
-                            
-                            <code>love.forte.simbot.common.api.message.containers.BotNameContainer</code>
                             
                             ,
                             
@@ -251,6 +211,22 @@ public interface <span class="typeNameLabel"><a href=MessageEventGet.html>Messag
                                         </tr>
                                         
                                         <tr id="i0" class="altColor">
+                                            <td class="colFirst"><code>abstract <a href=../love.forte.simbot.common.api.message/MessageContent.html>MessageContent</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MessageEventGet.html#getMsgContent()>getMsgContent</a>() </code>
+                                            </th>
+                                            <td class="colLast">消息事件的消息正文文本。允许对其进行修改。<a href=MessageEventGet.html#msgContent()>消息正文</a> 不允许为<span class="code">null</span>，但是其中的 <a href=../love.forte.simbot.common.api.message/MessageContent.html#msg()>msg</a> 则不保证其内容了。</td>
+                                        </tr>
+                                        
+                                        <tr id="i1" class="rowColor">
+                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=MessageEventGet.html#getMsg()>getMsg</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i2" class="altColor">
                                             <td class="colFirst"><code>abstract <a href=../love.forte.simbot.common.api.message.assists/Flag.html>Flag</a>&lt;<a href=MessageEventGet.html#MessageEventGet.MessageFlagContent>MessageEventGet.MessageFlagContent</a>&gt;</code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=MessageEventGet.html#getFlag()>getFlag</a>() </code>
@@ -258,7 +234,7 @@ public interface <span class="typeNameLabel"><a href=MessageEventGet.html>Messag
                                             <td class="colLast">消息类型的标识</td>
                                         </tr>
                                         
-                                        <tr id="i1" class="rowColor">
+                                        <tr id="i3" class="rowColor">
                                             <td class="colFirst"><code>abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=MessageEventGet.html#getId()>getId</a>() </code>
@@ -266,15 +242,7 @@ public interface <span class="typeNameLabel"><a href=MessageEventGet.html>Messag
                                             <td class="colLast">当前监听事件消息的ID。一般情况下应当是一个唯一ID。</td>
                                         </tr>
                                         
-                                        <tr id="i2" class="altColor">
-                                            <td class="colFirst"><code>abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=MessageEventGet.html#getMsg()>getMsg</a>() </code>
-                                            </th>
-                                            <td class="colLast">监听消息的消息正文文本</td>
-                                        </tr>
-                                        
-                                        <tr id="i3" class="rowColor">
+                                        <tr id="i4" class="altColor">
                                             <td class="colFirst"><code>abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html>Long</a></code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=MessageEventGet.html#getTime()>getTime</a>() </code>
@@ -282,7 +250,7 @@ public interface <span class="typeNameLabel"><a href=MessageEventGet.html>Messag
                                             <td class="colLast">消息接收到的时间。一般是一个时间戳。</td>
                                         </tr>
                                         
-                                        <tr id="i4" class="altColor">
+                                        <tr id="i5" class="rowColor">
                                             <td class="colFirst"><code>abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=MessageEventGet.html#getOriginalData()>getOriginalData</a>() </code>
@@ -290,100 +258,36 @@ public interface <span class="typeNameLabel"><a href=MessageEventGet.html>Messag
                                             <td class="colLast">得到原始数据字符串。 数据不应该为null。</td>
                                         </tr>
                                         
-                                        <tr id="i5" class="rowColor">
-                                            <td class="colFirst"><code>abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=MessageEventGet.html#getBotCode()>getBotCode</a>() </code>
-                                            </th>
-                                            <td class="colLast">当前的bot的账号</td>
-                                        </tr>
-                                        
                                         <tr id="i6" class="altColor">
-                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html>Long</a></code>
+                                            <td class="colFirst"><code>abstract <a href=../love.forte.simbot.common.api.message.containers/BotInfoContainer.html>BotInfoContainer</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=MessageEventGet.html#getBotCodeNumber()>getBotCodeNumber</a>() </code>
+                                            <th class="colSecond" scope="row"><code><a href=MessageEventGet.html#getBotInfo()>getBotInfo</a>() </code>
                                             </th>
-                                            <td class="colLast"></td>
+                                            <td class="colLast">bot信息</td>
                                         </tr>
                                         
                                         <tr id="i7" class="rowColor">
-                                            <td class="colFirst"><code>abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
+                                            <td class="colFirst"><code>abstract <a href=../love.forte.simbot.common.api.message.containers/AccountInfoContainer.html>AccountInfoContainer</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=MessageEventGet.html#getBotName()>getBotName</a>() </code>
+                                            <th class="colSecond" scope="row"><code><a href=MessageEventGet.html#getAccountInfo()>getAccountInfo</a>() </code>
                                             </th>
-                                            <td class="colLast">机器人的名称</td>
+                                            <td class="colLast">账号的信息。一般来讲是不可能为null的，但是其中的信息就不一定了</td>
                                         </tr>
                                         
                                         <tr id="i8" class="altColor">
-                                            <td class="colFirst"><code>abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
+                                            <td class="colFirst"><code>abstract <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=MessageEventGet.html#getBotAvatar()>getBotAvatar</a>() </code>
+                                            <th class="colSecond" scope="row"><code><a href=MessageEventGet.html#setMsgContent(MessageContent)>setMsgContent</a>(<a href=../love.forte.simbot.common.api.message/MessageContent.html>MessageContent</a> msgContent) </code>
                                             </th>
-                                            <td class="colLast">机器人的头像</td>
+                                            <td class="colLast">消息事件的消息正文文本。允许对其进行修改。<a href=MessageEventGet.html#msgContent()>消息正文</a> 不允许为<span class="code">null</span>，但是其中的 <a href=../love.forte.simbot.common.api.message/MessageContent.html#msg()>msg</a> 则不保证其内容了。</td>
                                         </tr>
                                         
                                         <tr id="i9" class="rowColor">
-                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=MessageEventGet.html#getAccountRemarkOrNickname()>getAccountRemarkOrNickname</a>() </code>
-                                            </th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr id="i10" class="altColor">
-                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=MessageEventGet.html#getAccountNicknameAndRemark()>getAccountNicknameAndRemark</a>() </code>
-                                            </th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr id="i11" class="rowColor">
-                                            <td class="colFirst"><code>abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=MessageEventGet.html#getAccountNickname()>getAccountNickname</a>() </code>
-                                            </th>
-                                            <td class="colLast">昵称</td>
-                                        </tr>
-                                        
-                                        <tr id="i12" class="altColor">
-                                            <td class="colFirst"><code>abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=MessageEventGet.html#getAccountRemark()>getAccountRemark</a>() </code>
-                                            </th>
-                                            <td class="colLast">好友备注或群名片</td>
-                                        </tr>
-                                        
-                                        <tr id="i13" class="rowColor">
-                                            <td class="colFirst"><code>abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=MessageEventGet.html#getAccountAvatar()>getAccountAvatar</a>() </code>
-                                            </th>
-                                            <td class="colLast">得到账号的头像地址.</td>
-                                        </tr>
-                                        
-                                        <tr id="i14" class="altColor">
-                                            <td class="colFirst"><code>abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=MessageEventGet.html#getAccountCode()>getAccountCode</a>() </code>
-                                            </th>
-                                            <td class="colLast">账号</td>
-                                        </tr>
-                                        
-                                        <tr id="i15" class="rowColor">
-                                            <td class="colFirst"><code><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html>Long</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=MessageEventGet.html#getAccountCodeNumber()>getAccountCodeNumber</a>() </code>
-                                            </th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr id="i16" class="altColor">
-                                            <td class="colFirst"><code>abstract <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
+                                            <td class="colFirst"><code><a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=MessageEventGet.html#setMsg(String)>setMsg</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> msg) </code>
                                             </th>
-                                            <td class="colLast">监听消息的消息正文文本</td>
+                                            <td class="colLast"></td>
                                         </tr>
                                         
                                         </tbody>
@@ -431,6 +335,36 @@ public interface <span class="typeNameLabel"><a href=MessageEventGet.html>Messag
                             </a>
                                 <h3>Method Detail</h3>
                                 
+                                <a id="getMsgContent()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getMsgContent</h4>
+                                        <pre class="methodSignature"> abstract <a href=../love.forte.simbot.common.api.message/MessageContent.html>MessageContent</a> <a href=MessageEventGet.html#getMsgContent()>getMsgContent</a>()</pre>
+                                        <div class="block">消息事件的消息正文文本。允许对其进行修改。<a href=MessageEventGet.html#msgContent()>消息正文</a> 不允许为<span class="code">null</span>，但是其中的 <a href=../love.forte.simbot.common.api.message/MessageContent.html#msg()>msg</a> 则不保证其内容了。</div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getMsg()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getMsg</h4>
+                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=MessageEventGet.html#getMsg()>getMsg</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
                                 <a id="getFlag()">
                                     <!--   -->
                                 </a>
@@ -456,21 +390,6 @@ public interface <span class="typeNameLabel"><a href=MessageEventGet.html>Messag
                                         <h4>getId</h4>
                                         <pre class="methodSignature"> abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=MessageEventGet.html#getId()>getId</a>()</pre>
                                         <div class="block">当前监听事件消息的ID。一般情况下应当是一个唯一ID。</div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getMsg()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getMsg</h4>
-                                        <pre class="methodSignature"> abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=MessageEventGet.html#getMsg()>getMsg</a>()</pre>
-                                        <div class="block">监听消息的消息正文文本</div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
@@ -506,166 +425,46 @@ public interface <span class="typeNameLabel"><a href=MessageEventGet.html>Messag
                                     </li>
                                 </ul>
                                 
-                                <a id="getBotCode()">
+                                <a id="getBotInfo()">
                                     <!--   -->
                                 </a>
                                 <ul class=
                                               "blockList"
                                           >
                                     <li class="blockList">
-                                        <h4>getBotCode</h4>
-                                        <pre class="methodSignature"> abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=MessageEventGet.html#getBotCode()>getBotCode</a>()</pre>
-                                        <div class="block">当前的bot的账号</div>
+                                        <h4>getBotInfo</h4>
+                                        <pre class="methodSignature"> abstract <a href=../love.forte.simbot.common.api.message.containers/BotInfoContainer.html>BotInfoContainer</a> <a href=MessageEventGet.html#getBotInfo()>getBotInfo</a>()</pre>
+                                        <div class="block">bot信息</div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
                                 </ul>
                                 
-                                <a id="getBotCodeNumber()">
+                                <a id="getAccountInfo()">
                                     <!--   -->
                                 </a>
                                 <ul class=
                                               "blockList"
                                           >
                                     <li class="blockList">
-                                        <h4>getBotCodeNumber</h4>
-                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html>Long</a> <a href=MessageEventGet.html#getBotCodeNumber()>getBotCodeNumber</a>()</pre>
-                                        <div class="block"></div>
+                                        <h4>getAccountInfo</h4>
+                                        <pre class="methodSignature"> abstract <a href=../love.forte.simbot.common.api.message.containers/AccountInfoContainer.html>AccountInfoContainer</a> <a href=MessageEventGet.html#getAccountInfo()>getAccountInfo</a>()</pre>
+                                        <div class="block">账号的信息。一般来讲是不可能为null的，但是其中的信息就不一定了</div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
                                 </ul>
                                 
-                                <a id="getBotName()">
+                                <a id="setMsgContent(MessageContent)">
                                     <!--   -->
                                 </a>
                                 <ul class=
                                               "blockList"
                                           >
                                     <li class="blockList">
-                                        <h4>getBotName</h4>
-                                        <pre class="methodSignature"> abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=MessageEventGet.html#getBotName()>getBotName</a>()</pre>
-                                        <div class="block">机器人的名称</div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getBotAvatar()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getBotAvatar</h4>
-                                        <pre class="methodSignature"> abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=MessageEventGet.html#getBotAvatar()>getBotAvatar</a>()</pre>
-                                        <div class="block">机器人的头像</div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getAccountRemarkOrNickname()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getAccountRemarkOrNickname</h4>
-                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=MessageEventGet.html#getAccountRemarkOrNickname()>getAccountRemarkOrNickname</a>()</pre>
-                                        <div class="block"></div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getAccountNicknameAndRemark()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getAccountNicknameAndRemark</h4>
-                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=MessageEventGet.html#getAccountNicknameAndRemark()>getAccountNicknameAndRemark</a>()</pre>
-                                        <div class="block"></div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getAccountNickname()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getAccountNickname</h4>
-                                        <pre class="methodSignature"> abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=MessageEventGet.html#getAccountNickname()>getAccountNickname</a>()</pre>
-                                        <div class="block">昵称</div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getAccountRemark()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getAccountRemark</h4>
-                                        <pre class="methodSignature"> abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=MessageEventGet.html#getAccountRemark()>getAccountRemark</a>()</pre>
-                                        <div class="block">好友备注或群名片</div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getAccountAvatar()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getAccountAvatar</h4>
-                                        <pre class="methodSignature"> abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=MessageEventGet.html#getAccountAvatar()>getAccountAvatar</a>()</pre>
-                                        <div class="block">得到账号的头像地址.</div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getAccountCode()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getAccountCode</h4>
-                                        <pre class="methodSignature"> abstract <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> <a href=MessageEventGet.html#getAccountCode()>getAccountCode</a>()</pre>
-                                        <div class="block">账号</div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getAccountCodeNumber()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getAccountCodeNumber</h4>
-                                        <pre class="methodSignature"> <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html>Long</a> <a href=MessageEventGet.html#getAccountCodeNumber()>getAccountCodeNumber</a>()</pre>
-                                        <div class="block"></div>
+                                        <h4>setMsgContent</h4>
+                                        <pre class="methodSignature"> abstract <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=MessageEventGet.html#setMsgContent(MessageContent)>setMsgContent</a>(<a href=../love.forte.simbot.common.api.message/MessageContent.html>MessageContent</a> msgContent)</pre>
+                                        <div class="block">消息事件的消息正文文本。允许对其进行修改。<a href=MessageEventGet.html#msgContent()>消息正文</a> 不允许为<span class="code">null</span>，但是其中的 <a href=../love.forte.simbot.common.api.message/MessageContent.html#msg()>msg</a> 则不保证其内容了。</div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
@@ -679,8 +478,8 @@ public interface <span class="typeNameLabel"><a href=MessageEventGet.html>Messag
                                           >
                                     <li class="blockList">
                                         <h4>setMsg</h4>
-                                        <pre class="methodSignature"> abstract <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=MessageEventGet.html#setMsg(String)>setMsg</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> msg)</pre>
-                                        <div class="block">监听消息的消息正文文本</div>
+                                        <pre class="methodSignature"> <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=MessageEventGet.html#setMsg(String)>setMsg</a>(<a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>String</a> msg)</pre>
+                                        <div class="block"></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
